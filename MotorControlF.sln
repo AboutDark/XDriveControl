@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MotorControlF", "MotorControlF\MotorControlF.csproj", "{89AC24AE-5BDC-479C-99F3-06B5162C8BE7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89AC24AE-5BDC-479C-99F3-06B5162C8BE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89AC24AE-5BDC-479C-99F3-06B5162C8BE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89AC24AE-5BDC-479C-99F3-06B5162C8BE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89AC24AE-5BDC-479C-99F3-06B5162C8BE7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {844722E1-EC53-4E5C-8D05-078D057ECCD7}
+	EndGlobalSection
+EndGlobal
