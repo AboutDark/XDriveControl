@@ -166,6 +166,10 @@ namespace MotorControlF
                     ModbusConnect();
                     button2.Text = "断开";
                     tabControl1_Selecting(null,null);
+
+                    // 显示版本号
+                    UInt32 iver = Convert.ToUInt32(GetInt32(1));
+                    version.Text = $"{Convert.ToString(iver >> 24, 16)}.{Convert.ToString(iver << 8 >> 24, 16)}.{Convert.ToString(iver & 0xffff, 16)}";
                 }
                 catch (Exception ex)
                 {
@@ -215,226 +219,225 @@ namespace MotorControlF
         private void button3_Click(object sender, EventArgs e)
         {
             // 读取目标位置
-            textBox6.Text = GetInt32(78);
+            textBox6.Text = GetInt32(84);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             // 写入目标位置
-            SetInt32(78, textBox6.Text);
+            SetInt32(84, textBox6.Text);
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             // 读取最大速度
-            textBox7.Text = GetInt32(105);
+            textBox7.Text = GetInt32(112);
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             // 写入最大速度
-            SetInt32(105, textBox7.Text);
+            SetInt32(112, textBox7.Text);
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
             // 读取DCE KP
-            textBox8.Text = GetInt32(29);
+            textBox8.Text = GetInt32(33);
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             // 读取DCE KP
-            SetInt32(29, textBox8.Text);
+            SetInt32(33, textBox8.Text);
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
             // 读取DCE KI
-            textBox9.Text = GetInt32(31);
+            textBox9.Text = GetInt32(35);
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
             // 写入DCE KI
-            SetInt32(31, textBox9.Text);
+            SetInt32(35, textBox9.Text);
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
             // 读取DCE KV
-            textBox10.Text = GetInt32(33);
+            textBox10.Text = GetInt32(37);
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
             // 写入DCE KV
-            SetInt32(33, textBox10.Text);
+            SetInt32(37, textBox10.Text);
         }
 
         private void button14_Click(object sender, EventArgs e)
         {
             // 读取DCE KD
-            textBox11.Text = GetInt32(35);
+            textBox11.Text = GetInt32(39);
         }
 
         private void button13_Click(object sender, EventArgs e)
         {
             // 写入DCE KD
-            SetInt32(35, textBox11.Text);
+            SetInt32(39, textBox11.Text);
         }
 
         private void button15_Click(object sender, EventArgs e)
         {
             // 读取目标位置
-            textBox6.Text = GetInt32(78);
+            textBox6.Text = GetInt32(84);
             // 读取最大速度
-            textBox7.Text = GetInt32(105);
+            textBox7.Text = GetInt32(112);
             // 读取DCE KP
-            textBox8.Text = GetInt32(29);
+            textBox8.Text = GetInt32(33);
             // 读取DCE KI
-            textBox9.Text = GetInt32(31);
+            textBox9.Text = GetInt32(35);
             // 读取DCE KV
-            textBox10.Text = GetInt32(33);
+            textBox10.Text = GetInt32(37);
             // 读取DCE KD
-            textBox11.Text = GetInt32(35);
+            textBox11.Text = GetInt32(39);
         }
 
         private void button16_Click(object sender, EventArgs e)
         {
 
             // 写入目标位置
-            SetInt32(78, textBox6.Text);
+            SetInt32(84, textBox6.Text);
             // 写入最大速度
-            SetInt32(105, textBox7.Text);
+            SetInt32(112, textBox7.Text);
             // 读取DCE KP
-            SetInt32(29, textBox8.Text);
+            SetInt32(33, textBox8.Text);
             // 写入DCE KI
-            SetInt32(31, textBox9.Text);
+            SetInt32(35, textBox9.Text);
             // 写入DCE KV
-            SetInt32(33, textBox10.Text);
+            SetInt32(37, textBox10.Text);
             // 写入DCE KD
-            SetInt32(35, textBox11.Text);
+            SetInt32(39, textBox11.Text);
         }
 
         private void button28_Click(object sender, EventArgs e)
         {
             // 读取 速度
-            textBox16.Text = GetInt32(80);
+            textBox16.Text = GetInt32(86);
         }
 
         private void button27_Click(object sender, EventArgs e)
         {
             // 写入 速度
-            SetInt32(80, textBox16.Text);
+            SetInt32(86, textBox16.Text);
         }
 
         private void button26_Click(object sender, EventArgs e)
         {
             // 读取PID KP
-            textBox15.Text = GetInt32(3);
+            textBox15.Text = GetInt32(7);
         }
 
         private void button25_Click(object sender, EventArgs e)
         {
             // 写入PID KP
-            SetInt32(3, textBox15.Text);
+            SetInt32(7, textBox15.Text);
         }
 
         private void button24_Click(object sender, EventArgs e)
         {
             // 读取PID KI
-            textBox14.Text = GetInt32(5);
+            textBox14.Text = GetInt32(9);
         }
 
         private void button23_Click(object sender, EventArgs e)
         {
             // 写入PID KI
-            SetInt32(5, textBox14.Text);
+            SetInt32(9, textBox14.Text);
         }
 
         private void button20_Click(object sender, EventArgs e)
         {
             // 读取PID KD
-            textBox12.Text = GetInt32(7);
+            textBox12.Text = GetInt32(11);
         }
 
         private void button19_Click(object sender, EventArgs e)
         {
             // 写入PID KD
-            SetInt32(7, textBox12.Text);
+            SetInt32(11, textBox12.Text);
         }
 
         private void button18_Click(object sender, EventArgs e)
-        {
-            // 读取 速度
-            textBox16.Text = GetInt32(80);
+        {            // 读取 速度
+            textBox16.Text = GetInt32(86);
             // 读取PID KP
-            textBox15.Text = GetInt32(3);
+            textBox15.Text = GetInt32(7);
             // 读取PID KI
-            textBox14.Text = GetInt32(5);
+            textBox14.Text = GetInt32(9);
             // 读取PID KD
-            textBox12.Text = GetInt32(7);
+            textBox12.Text = GetInt32(11);
         }
 
         private void button17_Click(object sender, EventArgs e)
         {
             // 写入 速度
-            SetInt32(80, textBox16.Text);
+            SetInt32(86, textBox16.Text);
             // 写入PID KP
-            SetInt32(3, textBox15.Text);
+            SetInt32(7, textBox15.Text);
             // 写入PID KI
-            SetInt32(5, textBox14.Text);
+            SetInt32(9, textBox14.Text);
             // 写入PID KD
-            SetInt32(7, textBox12.Text);
+            SetInt32(11, textBox12.Text);
         }
 
         private void button36_Click(object sender, EventArgs e)
         {
             // 读取 力矩
-            textBox19.Text = GetInt16(82);
+            textBox19.Text = GetInt16(88);
         }
 
         private void button35_Click(object sender, EventArgs e)
         {
             // 写入 力矩
-            SetInt16(82, textBox19.Text);
+            SetInt16(88, textBox19.Text);
         }
 
         private void button34_Click(object sender, EventArgs e)
         {
             // 读取 堵转
-            textBox18.Text = GetInt16(99);
+            textBox18.Text = GetInt32(105);
         }
 
         private void button33_Click(object sender, EventArgs e)
         {
             // 写入 堵转
-            SetInt16(99, textBox18.Text);
+            SetInt32(105, textBox18.Text);
         }
 
         private void button22_Click(object sender, EventArgs e)
         {
             // 读取 力矩
-            textBox19.Text = GetInt16(82);
+            textBox19.Text = GetInt16(88);
             // 读取 堵转
-            textBox18.Text = GetInt16(99);
+            textBox18.Text = GetInt16(105);
             // 读取使能
-            textBox2.Text = GetInt16(83);
+            textBox2.Text = GetInt16(89);
             // 读取急停
-            textBox3.Text = GetInt16(84);
+            textBox3.Text = GetInt16(90);
         }
 
         private void button21_Click(object sender, EventArgs e)
         {
             // 写入 力矩
-            SetInt16(82, textBox19.Text);
+            SetInt16(88, textBox19.Text);
             // 写入 堵转
-            SetInt16(99, textBox18.Text);
+            SetInt16(109, textBox18.Text);
             // 写入使能
-            SetInt16(83, textBox2.Text);
+            SetInt16(89, textBox2.Text);
             // 写入急停
-            SetInt16(84, textBox3.Text);
+            SetInt16(90, textBox3.Text);
         }
 
         private void tabControl1_Selecting(object sender, TabControlCancelEventArgs e)
@@ -443,16 +446,16 @@ namespace MotorControlF
             {
                 case "位置模式":
                     // 将真实位置设置为目标位置
-                    SetInt32(78, GetInt32(62));
-                    SetInt16(54, 0x20.ToString());
+                    SetInt32(84, GetInt32(68));
+                    SetInt32(58, 0x20.ToString());
                     button15_Click(null, null);
                     break;
                 case "转速模式":
-                    SetInt16(54, 0x21.ToString());
+                    SetInt32(58, 0x21.ToString());
                     button18_Click(null, null);
                     break;
                 case "力矩模式":
-                    SetInt16(54, 0x22.ToString());
+                    SetInt32(58, 0x22.ToString());
                     button22_Click(null, null);
                     break;
                 case "系统配置":
@@ -470,7 +473,7 @@ namespace MotorControlF
                 // 转速监控
                 if (checkBox1.Checked)
                 {
-                    int buf = Convert.ToInt32( GetInt32(68));
+                    int buf = Convert.ToInt32( GetInt32(74));
                     chart1.Invoke(new Action(()=> 
                     {
                         chart1.Series[0].Points.Add(buf/51200.0);
@@ -499,7 +502,7 @@ namespace MotorControlF
                 // 力矩监控
                 if (checkBox2.Checked)
                 {
-                    int buf = Convert.ToInt32( GetInt32(95));
+                    int buf = Convert.ToInt32( GetInt32(101)); 
                     chart2.Invoke(new Action(() =>
                     {
                         chart2.Series[0].Points.Add(buf);
@@ -556,25 +559,25 @@ namespace MotorControlF
         private void button39_Click(object sender, EventArgs e)
         {
             // 读取使能
-            textBox2.Text = GetInt16(83);
+            textBox2.Text = GetInt16(89);
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
             // 写入使能
-            SetInt16(83, textBox2.Text);
+            SetInt16(89, textBox2.Text);
         }
 
         private void button46_Click(object sender, EventArgs e)
         {
             // 读取急停
-            textBox3.Text = GetInt16(84);
+            textBox3.Text = GetInt16(90);
         }
 
         private void button40_Click(object sender, EventArgs e)
         {
             // 写入急停
-            SetInt16(84, textBox3.Text);
+            SetInt16(90, textBox3.Text);
         }
 
         private void Form1_SizeChanged(object sender, EventArgs e)
@@ -596,69 +599,69 @@ namespace MotorControlF
         private void button30_Click(object sender, EventArgs e)
         {
             // 读取波特率
-            textBox21.Text = GetInt32(159);
+            textBox21.Text = GetInt32(168);
             // 读取模式
-            comboBox5.SelectedIndex = Convert.ToInt16(GetInt16(155));
+            comboBox5.SelectedIndex = Convert.ToInt16(GetInt16(163));
             // 读取站台号
-            textBox13.Text = GetInt16(163);
+            textBox13.Text = GetInt16(172);
         }
 
         private void button29_Click(object sender, EventArgs e)
         {
             // 写入波特率
-            SetInt32(159, textBox21.Text);
+            SetInt32(168, textBox21.Text);
             // 写入模式
-            SetInt16(155, comboBox5.SelectedIndex.ToString());
+            SetInt16(163, comboBox5.SelectedIndex.ToString());
             // 写入站台号
-            SetInt16(163, textBox13.Text);
+            SetInt16(172, textBox13.Text);
         }
 
         private void button42_Click(object sender, EventArgs e)
         {
             // 读取波特率
-            textBox21.Text = GetInt32(159);
+            textBox21.Text = GetInt32(168);
         }
 
         private void button41_Click(object sender, EventArgs e)
         {
             // 写入波特率
-            SetInt32(159, textBox21.Text);
+            SetInt32(168, textBox21.Text);
         }
 
         private void button38_Click(object sender, EventArgs e)
         {
             // 读取模式
-            comboBox5.SelectedIndex = Convert.ToInt16(GetInt16(155));
+            comboBox5.SelectedIndex = Convert.ToInt16(GetInt16(163));
         }
 
         private void button37_Click(object sender, EventArgs e)
         {
             // 写入模式
-            SetInt16(155, comboBox5.SelectedIndex.ToString());
+            SetInt16(163, comboBox5.SelectedIndex.ToString());
         }
 
         private void button44_Click(object sender, EventArgs e)
         {
             // 读取站台号
-            textBox13.Text = GetInt16(163);
+            textBox13.Text = GetInt16(172);
         }
 
         private void button43_Click(object sender, EventArgs e)
         {
             // 写入站台号
-            SetInt16(163, textBox13.Text);
+            SetInt16(172, textBox13.Text);
         }
 
         private void button45_Click(object sender, EventArgs e)
         {
             // 保存
-            SetInt16(165, "1");
+            SetInt16(3, "1");
         }
 
         private void button47_Click(object sender, EventArgs e)
         {
             // 重启设备
-            SetInt16(164, "1");
+            SetInt16(2, "1");
         }
     }
 }

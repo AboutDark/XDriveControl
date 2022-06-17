@@ -141,6 +141,8 @@ namespace MotorControlF
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.version = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -216,6 +218,8 @@ namespace MotorControlF
             // 
             // splitContainer2.Panel1
             // 
+            this.splitContainer2.Panel1.Controls.Add(this.version);
+            this.splitContainer2.Panel1.Controls.Add(this.label15);
             this.splitContainer2.Panel1.Controls.Add(this.comboBox4);
             this.splitContainer2.Panel1.Controls.Add(this.button2);
             this.splitContainer2.Panel1.Controls.Add(this.textBox5);
@@ -227,14 +231,14 @@ namespace MotorControlF
             this.splitContainer2.Panel1.Controls.Add(this.label2);
             this.splitContainer2.Panel1.Controls.Add(this.comboBox1);
             this.splitContainer2.Panel1.Controls.Add(this.label1);
-            this.splitContainer2.Panel1MinSize = 170;
+            this.splitContainer2.Panel1MinSize = 180;
             // 
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.tabControl1);
             this.splitContainer2.Panel2.Padding = new System.Windows.Forms.Padding(5, 0, 5, 5);
             this.splitContainer2.Size = new System.Drawing.Size(279, 531);
-            this.splitContainer2.SplitterDistance = 170;
+            this.splitContainer2.SplitterDistance = 180;
             this.splitContainer2.TabIndex = 0;
             this.splitContainer2.TabStop = false;
             // 
@@ -356,7 +360,7 @@ namespace MotorControlF
             this.tabControl1.Location = new System.Drawing.Point(5, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(269, 352);
+            this.tabControl1.Size = new System.Drawing.Size(269, 342);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tabControl1_Selecting);
             // 
@@ -391,7 +395,7 @@ namespace MotorControlF
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(261, 326);
+            this.tabPage1.Size = new System.Drawing.Size(261, 316);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "位置模式";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -1337,7 +1341,7 @@ namespace MotorControlF
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(68, 21);
             this.textBox4.TabIndex = 2;
-            this.textBox4.Text = "1000";
+            this.textBox4.Text = "25";
             this.textBox4.Leave += new System.EventHandler(this.textBox4_Leave);
             // 
             // label6
@@ -1348,6 +1352,23 @@ namespace MotorControlF
             this.label6.Size = new System.Drawing.Size(65, 12);
             this.label6.TabIndex = 1;
             this.label6.Text = "刷新间隔：";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(14, 156);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(65, 12);
+            this.label15.TabIndex = 23;
+            this.label15.Text = "版 本 号：";
+            // 
+            // version
+            // 
+            this.version.AutoSize = true;
+            this.version.Location = new System.Drawing.Point(85, 156);
+            this.version.Name = "version";
+            this.version.Size = new System.Drawing.Size(0, 12);
+            this.version.TabIndex = 24;
             // 
             // Form1
             // 
@@ -1509,6 +1530,8 @@ namespace MotorControlF
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button47;
+        private System.Windows.Forms.Label version;
+        private System.Windows.Forms.Label label15;
     }
 }
 
